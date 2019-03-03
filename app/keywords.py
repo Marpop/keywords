@@ -1,11 +1,10 @@
-from urllib.request import urlopen
-
+import requests
 from bs4 import BeautifulSoup
 
 
-def get_page_content(url):
-    page = urlopen(url)
-    return str(page.read())
+def get_page_source(url):
+    page = requests.get(url)
+    return page.text
 
 
 def get_keywords(page_content):

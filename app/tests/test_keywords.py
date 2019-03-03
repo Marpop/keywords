@@ -1,10 +1,10 @@
-from app.keywords import get_keywords, get_page_content
+from app.keywords import get_keywords, get_page_source
 
 
 def test_get_page():
     url = "https://www.python.org"
-    assert "head" in get_page_content(url)
-    assert "body" in get_page_content(url)
+    assert "head" in get_page_source(url)
+    assert "body" in get_page_source(url)
 
 
 def test_get_keywords(html_content):
