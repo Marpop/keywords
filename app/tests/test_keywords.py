@@ -7,5 +7,20 @@ def test_get_page():
     assert "body" in get_page_content(url)
 
 
-def test_get_keywords(python_html):
-    assert get_keywords(python_html) == {"Python", "programming", "language"}
+def test_get_keywords(html_content):
+    assert get_keywords(html_content) == {
+        "Python",
+        "programming",
+        "language",
+        "object",
+        "oriented",
+        "web",
+        "free",
+        "open",
+        "source",
+        "software",
+        "license",
+        "documentation",
+        "download",
+        "community",
+    }

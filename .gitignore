@@ -45,3 +45,7 @@ pids
 # Environmental variables
 .env
 .envs/*
+
+# Test data
+app/tests/data/*
+!app/tests/data/.keep
