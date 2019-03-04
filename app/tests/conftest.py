@@ -2,6 +2,7 @@ import os
 from urllib.request import urlretrieve
 
 import pytest
+from bs4 import BeautifulSoup
 
 
 @pytest.fixture
@@ -12,3 +13,8 @@ def html_content():
         urlretrieve("https://www.python.org", html_file)
     with open(html_file, "r") as file:
         return file.read()
+
+
+@pytest.fixture
+def beautiful_soup(html_content):
+    return BeautifulSoup(html_content.lower(), "html.parser")

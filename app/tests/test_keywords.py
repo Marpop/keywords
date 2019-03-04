@@ -31,11 +31,11 @@ def test_get_keywords(html_content):
     ]
 
 
-def test_count_word_on_page(html_content):
-    assert count_word_on_page(html_content, "python") == 63
-    assert count_word_on_page(html_content, "software") == 6
-    assert count_word_on_page(html_content, "download") == 5
-    assert count_word_on_page(html_content, "object") == 1
+def test_count_word_on_page(html_content, beautiful_soup):
+    assert count_word_on_page(beautiful_soup, "python") == 63
+    assert count_word_on_page(beautiful_soup, "software") == 6
+    assert count_word_on_page(beautiful_soup, "download") == 5
+    assert count_word_on_page(beautiful_soup, "object") == 1
 
 
 def test_count_keywords(html_content):

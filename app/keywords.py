@@ -15,14 +15,12 @@ def get_keywords(page_content):
     return keywords_list
 
 
-def count_word_on_page(page_content, word):
-    soup = BeautifulSoup(page_content.lower(), "html.parser")
+def count_word_on_page(soup, word):
     words = soup.find_all(text=lambda text: text and word in text)
     return len(words)
 
 
 def count_keywords(page_content, keywords):
-    results = dict(
-        [(word, count_word_on_page(page_content, word)) for word in keywords]
-    )
+    soup = BeautifulSoup(page_content.lower(), "html.parser")
+    results = dict([(word, count_word_on_page(soup, word)) for word in keywords])
     return results
