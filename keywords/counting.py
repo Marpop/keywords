@@ -27,6 +27,7 @@ def count_keywords(page_content, keywords):
 
 
 def get_counting(url):
+    # TODO: exceptions/errors handling
     page_source = get_page_source(url)
     keywords = get_keywords(page_source)
     result = count_keywords(page_source, keywords)
