@@ -1,11 +1,11 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block content %}
-  <h1>Count keywords from:</h1>
-  <form method="POST" action="/">
-      {{ form.csrf_token }}
-      {{ form.url.label }} {{ form.url(size=50, placeholder="https://python.org") }}
-      {{ form.csrf_token }}
-      <input type="submit" value="Go">
-  </form>
+{% block app_content %}
+<h1>Count keywords from:</h1>
+<div class="row">
+  <div class="col-md-4">
+    {{ wtf.quick_form(form, button_map={'submit_button': 'primary'}) }}
+  </div>
+</div>
 {% endblock %}
