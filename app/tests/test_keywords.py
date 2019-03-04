@@ -1,4 +1,4 @@
-from app.keywords import get_keywords, get_page_source
+from app.keywords import count_word_on_page, get_keywords, get_page_source
 
 
 def test_get_page():
@@ -24,3 +24,10 @@ def test_get_keywords(html_content):
         "download",
         "community",
     }
+
+
+def test_count_word_on_page(html_content):
+    assert count_word_on_page(html_content, "python") == 63
+    assert count_word_on_page(html_content, "software") == 6
+    assert count_word_on_page(html_content, "download") == 5
+    assert count_word_on_page(html_content, "object") == 1

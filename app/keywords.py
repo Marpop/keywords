@@ -13,3 +13,9 @@ def get_keywords(page_content):
     keywords_string = meta_keywords_tag.attrs.get("content")
     keywords_list = keywords_string.split()
     return set(keywords_list)
+
+
+def count_word_on_page(page_content, word):
+    soup = BeautifulSoup(page_content.lower(), "html.parser")
+    words = soup.find_all(text=lambda text: text and word in text)
+    return len(words)
