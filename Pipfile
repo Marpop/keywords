@@ -12,6 +12,7 @@ flake8 = "*"
 black = "==18.9b0"
 isort = "*"
 pytest-flask = "*"
+pytest-mock = "*"
 
 [packages]
 bs4 = "*"

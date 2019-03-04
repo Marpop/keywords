@@ -24,3 +24,10 @@ def count_keywords(page_content, keywords):
     soup = BeautifulSoup(page_content.lower(), "html.parser")
     results = dict([(word, count_word_on_page(soup, word)) for word in keywords])
     return results
+
+
+def get_counting(url):
+    page_source = get_page_source(url)
+    keywords = get_keywords(page_source)
+    result = count_keywords(page_source, keywords)
+    return result
