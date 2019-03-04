@@ -20,6 +20,7 @@ flask = "*"
 wtforms = "*"
 flask-wtf = "*"
 flask-bootstrap = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"

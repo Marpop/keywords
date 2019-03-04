@@ -61,3 +61,7 @@ remove_py_cache: ## Remove cached Python bytecode
 	find . -name "*.pyc" | xargs rm -rf
 	find . -name "*.pyo" | xargs rm -rf
 	find . -name "__pycache__" -type d | xargs rm -rf
+
+.PHONY: run
+run: ## Run dev server
+	$(RUN_PIPENV) flask run
