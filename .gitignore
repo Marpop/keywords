@@ -47,5 +47,5 @@ pids
 .envs/*
 
 # Test data
-app/tests/data/*
-!app/tests/data/.keep
+keywords/tests/data/*
+!keywords/tests/data/.keep

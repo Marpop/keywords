@@ -1,4 +1,4 @@
-from app.keywords import (
+from keywords.counting import (
     count_keywords,
     count_word_on_page,
     get_keywords,
