@@ -11,10 +11,15 @@ pytest-sugar = "*"
 flake8 = "*"
 black = "==18.9b0"
 isort = "*"
+pytest-flask = "*"
 
 [packages]
 bs4 = "*"
 requests = "*"
+flask = "*"
+wtforms = "*"
+flask-wtf = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"
